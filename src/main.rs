@@ -5,7 +5,7 @@ use clap::Parser;
 #[clap(author, version, about, long_about = None)]
 #[clap(propagate_version = true)]
 struct Cli {
-    #[clap(short, long, default_value_t = 6)]
+    #[clap(short, long, default_value_t = 7)]
     day: u8,
 }
 
@@ -21,6 +21,7 @@ async fn main() {
         4 => day_04::process().await,
         5 => day_05::process().await,
         6 => day_06::process().await,
+        7 => day_07::process().await,
         _ => {
             println!("Hello, world - day {day}!");
         }
