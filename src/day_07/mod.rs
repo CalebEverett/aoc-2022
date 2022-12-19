@@ -95,7 +95,6 @@ impl TreeNode {
                 size = child.borrow().get_del_dir(threshold, size);
             }
         }
-        // println!("sum {sum} {} {}", self.name, self.children.is_some());
         size
     }
 }
@@ -189,7 +188,6 @@ pub async fn process() {
 
     println!(
         "Answer Part Two: {}",
-        root.borrow()
-            .get_del_dir(min_size_req, 70000000 - root.borrow().size),
+        root.borrow().get_del_dir(min_size_req, root.borrow().size),
     );
 }
